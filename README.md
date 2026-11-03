@@ -1,7 +1,7 @@
 # 📊 Market Data Service
 
 ## 🧬 Architecture
-* **Frontend:** SpringDoc OpenAPI
+* **Frontend:** HTML, CSS, JavaScript
 * **Backend:** Spring Boot 4.1.2
 
 ## 🔧 Prerequisites
