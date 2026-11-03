@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Market Data Service</title>
+    <style>
+        body {
+            font-family: 'Segoe UI';
+            background-color: #0b0e14;
+            color: #e4e7eb;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #161925;
+            height: 100px;
+            align-items: center;
+            padding-left: 20px;
+            display: flex;
+        }
+
+        .h1 {
+            margin: 0px;
+        }
+
+        button {
+            background-color: #00ff88;
+            color: #0b0e14;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        button:hover {
+            background-color: #00cc6e;
+        }
+
+        .content {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="h1">🚀 Market Data Service</h1>
+    </nav>
+
+    <div class="content">
+        <div class="button-container" style="flex-direction: column; align-items: center; gap: 15px;">
+            <!-- Input field for the stock symbol -->
+            <input type="text" id="tickerInput" placeholder="Enter Ticker (e.g. AAPL)"
+                style="padding: 10px; font-size: 18px; border-radius: 8px; border: 1px solid #262b40; background: #161925; color: white; text-align: center; text-transform: uppercase;">
+
+            <button id="fetchButton">Fetch</button>
+
+            <!-- Display area for the price response -->
+            <div id="priceDisplay" style="font-size: 24px; font-weight: bold; margin-top: 10px; color: #00ff88;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fetchBtn').addEventListener('click', () => {
+            const ticker = document.getElementById('tickerInput').value.trim().toUpperCase();
+            const display = document.getElementById('priceDisplay');
+
+            if (!ticker) {
+                display.textContent = "Please enter a ticker symbol.";
+                display.style.color = "#ff4a4a";
+                return;
+            }
+
+            display.textContent = "Fetching...";
+            display.style.color = "#e4e7eb";
+
+            fetch(`/api/market/quote/${ticker}`)
+                .then(res => res.json())
+                .then(data => {
+                    display.textContent = `${ticker}: $${data.currentPrice.toFixed(2)}`;
+                    display.style.color = "#00ff88";
+                })
+                .catch(err => {
+                    display.textContent = "Error fetching data.";
+                    display.style.color = "#ff4a4a";
+                });
+        });
+
+    </script>
+</body>
+
+</html>

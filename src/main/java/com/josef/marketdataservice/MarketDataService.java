@@ -1,0 +1,12 @@
+package com.josef.marketdataservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MarketDataService {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MarketDataService.class, args);
+	}
+}
