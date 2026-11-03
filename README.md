@@ -11,15 +11,26 @@
 ## 📐 Project Structure
 ```
 market-data-service/
-└── src/
-    └── main/
-        └── java/
-            └── com/
-                └── josef/
-                    └── marketdataservice/
-                        └── MarketDataService.java
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── josef/
+│       │           └── marketdataservice/
+│       │               ├── controller/
+│       │               │   └── MarketController.java
+│       │               ├── service/
+│       │               │   └── MarketService.java
+│       │               └── MarketApplication.java
+│       │
+│       └── resources/
+│           └── static/
+│               ├── index.html
+│               ├── script.js
+│               └── style.css
 ```
 
 ## 🚀 Getting Started
-1. Run `MarketDataService.java`
-2. Open **http://localhost:8080/swagger-ui/index.html**
+1. Run `MarketApplication.java`
+2. Open **http://localhost:8080**
+3. Enter a ticker and click "Get Price"
