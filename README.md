@@ -1,5 +1,7 @@
 # 📊 Market Data Service
 
+A full-stack Spring Boot application that integrates with Finnhub API to fetch and display stock market data.
+
 ## 🧬 Architecture
 * **Frontend:** HTML, CSS, JavaScript
 * **Backend:** Spring Boot 4.1.2
