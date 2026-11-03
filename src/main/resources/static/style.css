@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: #0b0e14;
+    color: #e4e7eb;
+    margin: 0;
+}
+
+nav {
+    background-color: #161925;
+    height: 100px;
+    align-items: center;
+    padding-left: 20px;
+    display: flex;
+}
+
+h1 {
+    margin: 0px;
+}
+
+main {
+    margin: 20px;
+}
+
+button {
+    background-color: #00ff88;
+    color: #0b0e14;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+    background-color: #00cc6e;
+}
+
+button:disabled {
+    background-color: #1c2333;
+    color: #4b5563;
+    cursor: not-allowed;
+}
+
+.fetch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-label {
+    font-size: 24px;
+    font-weight: 600;
+    color: #a0aec0;
+    margin-bottom: 2px;
+}
+
+#tickerInput {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #262b40;
+    background: #161925;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#tickerInput:focus {
+    outline: 2px solid #00ff88;
+}
+
+#tickerInput:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#priceDisplay {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.status-success {
+    color: #00ff88;
+}
+
+.status-error {
+    color: #ff4a4a;
+}
+
+.status-loading {
+    color: #a0aec0;
+}
