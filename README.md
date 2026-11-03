@@ -13,23 +13,22 @@ A full-stack Spring Boot application that integrates with Finnhub API to fetch a
 ## 📐 Project Structure
 ```
 market-data-service/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── josef/
-│       │           └── marketdataservice/
-│       │               ├── controller/
-│       │               │   └── MarketController.java
-│       │               ├── service/
-│       │               │   └── MarketService.java
-│       │               └── MarketApplication.java
-│       │
-│       └── resources/
-│           └── static/
-│               ├── index.html
-│               ├── script.js
-│               └── style.css
+└── src/
+    └── main/
+        ├── java/
+        │   └── com/
+        │       └── josef/
+        │           └── marketdataservice/
+        │               ├── controller/
+        │               │   └── MarketController.java
+        │               ├── service/
+        │               │   └── MarketService.java
+        │               └── MarketApplication.java
+        └── resources/
+            └── static/
+                ├── index.html
+                ├── script.js
+                └── style.css
 ```
 
 ## 🚀 Getting Started
